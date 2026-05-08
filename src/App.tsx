@@ -51,10 +51,10 @@ const AnimatedSphere = ({ color }: { color: string }) => {
 
 const Section = ({ children, title, icon: Icon, index }: { children: React.ReactNode, title: string, icon: any, index: number }) => (
   <motion.section 
-    initial={{ opacity: 0, x: index % 2 === 0 ? -600 : 600 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: false, amount: 0.1, margin: "0px 0px -50px 0px" }}
-    transition={{ duration: 1, type: "spring", stiffness: 50, damping: 20 }}
+    initial={{ opacity: 0, y: 50, x: index % 2 === 0 ? -20 : 20 }}
+    whileInView={{ opacity: 1, y: 0, x: 0 }}
+    viewport={{ once: true, amount: 0.1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
     className="section-container"
   >
     <div className="section-header">
@@ -82,7 +82,7 @@ const Char = ({ char, isDarkMode, index, activeIndex, onHover }: {
   char: string, isDarkMode: boolean, index: number, activeIndex: number | null, onHover: (idx: number | null) => void 
 }) => {
   const glowColor = isDarkMode ? "#22d3ee" : "#0369a1";
-  const baseColor = isDarkMode ? "#fff" : "#0f172a"; // Color marino profundo en modo claro
+  const baseColor = isDarkMode ? "#fff" : "#0f172a"; 
 
   const distance = activeIndex !== null ? Math.abs(index - activeIndex) : null;
   let yMove = 0;
@@ -131,7 +131,7 @@ const ParticleText = ({ text, isDarkMode }: { text: string, isDarkMode: boolean 
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(true);
-  const handleDownloadCV = () => window.open('/Mi CV.pdf', '_blank');
+  const handleDownloadCV = () => alert("Descarga de CV deshabilitada por motivos de seguridad.");
 
   return (
     <div className={`app-wrapper ${isDarkMode ? 'dark' : 'light'}`}>
@@ -167,7 +167,7 @@ const App = () => {
       <main className="content">
         <header className="hero">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-            <h1><ParticleText text="ÁNGEL ELIUD SAENZ TORRES" isDarkMode={isDarkMode} /></h1>
+            <h1><ParticleText text="ÁNGEL [CONFIDENCIAL]" isDarkMode={isDarkMode} /></h1>
             <p className="subtitle">ING. TECNOLOGÍAS DE LA INFORMACIÓN</p>
             <div className="hero-tags">
               <span>Desarrollador Full Stack</span>
@@ -176,7 +176,7 @@ const App = () => {
             </div>
             <motion.button className="download-btn" onClick={handleDownloadCV} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Download size={20} />
-              <span>Descargar CV</span>
+              <span>Solicitar CV</span>
             </motion.button>
           </motion.div>
         </header>
@@ -208,7 +208,7 @@ const App = () => {
           <div className="timeline">
             <div className="timeline-item">
               <div className="time">Dic 2025 - Actual</div>
-              <h3>Eagle Importación</h3>
+              <h3>[Empresa del Sector Industrial]</h3>
               <p className="role">Desarrollador</p>
               <ul>
                 <li>Actualizaciones del sistema interino (ERP).</li>
@@ -222,47 +222,47 @@ const App = () => {
 
             <div className="timeline-item">
               <div className="time">Ago 2024 - Dic 2024</div>
-              <h3>ALIRU (Estadías Profesionales)</h3>
+              <h3>[Agencia de Desarrollo Web]</h3>
               <p className="role">Desarrollador Web</p>
-              <p>Desarrollé un proyecto de Estadías Profesionales en ALIRU, creando una plataforma web para mejorar la experiencia de compra. Desarrollé una página web con catálogo de productos para facilitar cotizaciones y agilizar procesos de compra.</p>
+              <p>Desarrollé un proyecto de Estadías Profesionales creando una plataforma web para mejorar la experiencia de compra. Desarrollé una página web con catálogo de productos para facilitar cotizaciones y agilizar procesos de compra.</p>
             </div>
 
             <div className="timeline-item">
               <div className="time">Ago 2023 - Dic 2023</div>
-              <h3>Universidad Politécnica de Gómez Palacio (Estancias 2 - Logística)</h3>
+              <h3>[Institución de Educación Superior]</h3>
               <p className="role">Auxiliar de sistemas computacionales</p>
               <p>Desarrollo de geolocalización cartográfica de escuelas en la región. Realicé inventario de escuelas para proyecto de rutas accesibles. Colaboré en trazado de rutas para escuelas rurales en la región.</p>
             </div>
 
             <div className="timeline-item">
               <div className="time">Ago 2022 - Dic 2022</div>
-              <h3>Universidad Politécnica de Gómez Palacio (Estancias 1 - Mantenimiento)</h3>
+              <h3>[Institución de Educación Superior]</h3>
               <p className="role">Auxiliar de sistemas computacionales</p>
-              <p>Elaboré manuales de soporte y mantenimiento para equipos de cómputo. Brindé atención al personal interno de la Universidad Politécnica de Gómez Palacio.</p>
+              <p>Elaboré manuales de soporte y mantenimiento para equipos de cómputo. Brindé atención al personal interno.</p>
             </div>
           </div>
         </Section>
 
         <Section title="Educación" icon={GraduationCap} index={4}>
           <div className="edu-card">
-            <h3>Universidad Politécnica de Gómez Palacio</h3>
+            <h3>[Universidad Tecnológica]</h3>
             <p>Ingeniería en Tecnologías de la Información (2021 - 2024)</p>
           </div>
           <div className="edu-card">
-            <h3>Colegio de bachilleres del estado de Durango (Cobaed 35)</h3>
+            <h3>[Bachillerato Técnico]</h3>
             <p>Bachiller en Auxiliar Educativo (2018)</p>
           </div>
         </Section>
 
         <Section title="Contacto" icon={Mail} index={5}>
           <div className="contact-grid">
-            <a href="tel:8714475620" className="contact-item"><Phone size={24} /><span>8714475620</span></a>
-            <a href="mailto:angelsaenz1460@gmail.com" className="contact-item"><Mail size={24} /><span>angelsaenz1460@gmail.com</span></a>
+            <div className="contact-item"><Phone size={24} /><span>[Teléfono Confidencial]</span></div>
+            <div className="contact-item"><Mail size={24} /><span>[Correo Confidencial]</span></div>
           </div>
         </Section>
 
         <footer className="footer">
-          <p>© 2026 Ángel Saenz | Ing. en Tecnologías de la Información</p>
+          <p>© 2026 [Confidencial] | Ing. en Tecnologías de la Información</p>
         </footer>
       </main>
 
