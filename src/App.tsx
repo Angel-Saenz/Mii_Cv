@@ -167,7 +167,7 @@ const App = () => {
       <main className="content">
         <header className="hero">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-            <h1><ParticleText text="ING ANGEL SAENZ" isDarkMode={isDarkMode} /></h1>
+            <h1><ParticleText text="ANGEL ELIUD SAENZ TORRES" isDarkMode={isDarkMode} /></h1>
             <p className="subtitle">ING. TECNOLOGÍAS DE LA INFORMACIÓN</p>
             <div className="hero-tags">
               <span>Desarrollador Full Stack</span>
@@ -198,7 +198,7 @@ const App = () => {
 
         <Section title="Habilidades" icon={Sparkles} index={2}>
           <div className="skills-grid">
-            {["Trabajo con IA", "Pensamiento crítico", "Solución de problemas", "Buena comunicación", "Trabajo en colaboración", "Buen aprendiz"].map(skill => (
+            {["Trabajo con IA","Buen Criterio", "Pensamiento crítico", "Solución de problemas", "Buena comunicación", "Trabajo en colaboración", "Buen aprendiz"].map(skill => (
               <motion.div key={skill} className="skill-tag skill-highlight">{skill}</motion.div>
             ))}
           </div>
