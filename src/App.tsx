@@ -1,5 +1,6 @@
+/// <reference types="@react-three/fiber" />
 import React, { useRef, Suspense, useState, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
 import { OrbitControls, Stars, Float, MeshDistortMaterial, Cloud, Sky } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, Briefcase, GraduationCap, User, Cpu, Sun, Moon, Sparkles, Download } from 'lucide-react';
