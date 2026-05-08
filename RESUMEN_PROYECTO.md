@@ -1,4 +1,4 @@
-# Resumen del Proyecto: Portafolio Inmersivo 3D - [CONFIDENCIAL]
+# Resumen del Proyecto: Portafolio Inmersivo 3D - Ing Angel Saenz
 
 Este proyecto es un portafolio profesional de alto impacto visual desarrollado con un stack moderno enfocado en la interactividad y el rendimiento.
 
