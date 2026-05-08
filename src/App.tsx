@@ -190,7 +190,7 @@ const App = () => {
 
         <Section title="Conocimientos Técnicos" icon={Cpu} index={1}>
           <div className="skills-grid">
-            {["Vite & React", "TypeScript", "C# (.NET)", "HTML5", "CSS", "PHP", "JavaScript", "Node.js", "SQL Server", "MySQL", "Android Studio", "WordPress", "AppSheet", "Redes", "Microsoft Office"].map(skill => (
+            {["GitHub/Git","Vite & React", "TypeScript", "C# (.NET)","Visual Basic", "HTML5", "CSS", "PHP", "JavaScript", "Node.js", "SQL Server", "MySQL", "Android Studio", "WordPress", "AppSheet", "infraestructura de Redes", "Microsoft Office 365"].map(skill => (
               <motion.div key={skill} whileHover={{ scale: 1.05, backgroundColor: isDarkMode ? "rgba(34, 211, 238, 0.1)" : "rgba(14, 165, 233, 0.05)" }} className="skill-tag">{skill}</motion.div>
             ))}
           </div>
