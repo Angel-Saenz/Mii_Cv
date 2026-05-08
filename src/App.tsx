@@ -198,7 +198,7 @@ const App = () => {
 
         <Section title="Habilidades" icon={Sparkles} index={2}>
           <div className="skills-grid">
-            {["Trabajo con IA","Buen Criterio", "Pensamiento crítico", "Solución de problemas", "Buena comunicación", "Trabajo en colaboración", "Buen aprendiz"].map(skill => (
+            {["Lider de equipo de desarrollo","Trabajo con IA","Buen Criterio", "Pensamiento crítico", "Solución de problemas", "Buena comunicación", "Trabajo en colaboración", "Buen aprendiz"].map(skill => (
               <motion.div key={skill} className="skill-tag skill-highlight">{skill}</motion.div>
             ))}
           </div>
@@ -211,12 +211,14 @@ const App = () => {
               <h3>[Empresa del Sector Industrial]</h3>
               <p className="role">Desarrollador</p>
               <ul>
+                <li>Desarrollo de la página publicitaria de la empresa.</li>
                 <li>Actualizaciones del sistema interino (ERP).</li>
                 <li>Consultas y reportes en SQL Server.</li>
                 <li>Creación, modificación de Tablas y Stored Procedures en SQL Server.</li>
                 <li>Mantenimiento a la infraestructura de la red y reacomodo del Site.</li>
                 <li>Administración de usuarios, configuración de equipos e instalación de programas.</li>
                 <li>Auditor de inventario.</li>
+                <li>Personal a mi cargo (Practicantes).</li>
               </ul>
             </div>
 
@@ -225,6 +227,7 @@ const App = () => {
               <h3>[Agencia de Desarrollo Web]</h3>
               <p className="role">Desarrollador Web</p>
               <p>Desarrollé un proyecto de Estadías Profesionales creando una plataforma web para mejorar la experiencia de compra. Desarrollé una página web con catálogo de productos para facilitar cotizaciones y agilizar procesos de compra.</p>
+              <p>Coordine a un par de practicantes para la elaboración de este proyecto</p>
             </div>
 
             <div className="timeline-item">
