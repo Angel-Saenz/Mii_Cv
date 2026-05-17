@@ -168,7 +168,7 @@ const App = () => {
         <header className="hero">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
             <h1><ParticleText text="ANGEL ELIUD SAENZ TORRES" isDarkMode={isDarkMode} /></h1>
-            <p className="subtitle">ING. TECNOLOGÍAS DE LA INFORMACIÓN</p>
+            <p className="subtitle">INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN</p>
             <div className="hero-tags">
               <span>Desarrollador Full Stack</span>
               <span>Innovador</span>
